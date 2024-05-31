@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <div class="scores">
+        <div class="player" id="player1">
+          <p id="player1Name" class="player1">(X)</p>
+          <p id="player1Score">Score: 0</p>
+        </div>
+        <div class="player" id="player2">
+          <p id="player2Name" class="player2">(O)</p>
+          <p id="player2Score">Score: 0</p>
+        </div>
+      </div>
+      <p id="winner"></p>
+      <form id="playersForm" class="playersForm">
+        <div class="inputs">
+          <div class="input-container">
+            <label for="inputPlayer1">Set Player 1: </label>
+            <input
+              type="text"
+              placeholder="Player 1"
+              id="inputPlayer1"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <label for="inputPlayer2">Set Player 2: </label>
+            <input
+              type="text"
+              placeholder="Player 2"
+              id="inputPlayer2"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit" id="play">Play!</button>
+      </form>
+      <div class="board-container">
+        <div class="board hidden" id="board">
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square" id="3"></div>
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
+        </div>
+      </div>
+      <div class="reset-container hidden" id="reset-container">
+        <button onclick="resetGame()">Reset Board</button>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts.js"></script>
+</html>
